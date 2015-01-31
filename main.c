@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "mialibreria.h"
 
 const int N=5; // dimensione massima dell'array
-
-int massimo(int valori[], int dimensione);
-int minimo(int valori[], int dimensione);
-float media(int valori[], int dimensione);
 
 int main(int argc, char** argv) {
     int i;
@@ -28,30 +25,5 @@ int main(int argc, char** argv) {
     printf("Il valore MEDIO e' %f.\n", med);
     
     return (EXIT_SUCCESS);
-}
-
-int massimo(int valori[], int dimensione){
-    int i, max=valori[0];
-    for(i=1;i<dimensione;i++)
-        if(valori[i]>max)
-            max=valori[i];
-    return max;
-}
-
-int minimo(int valori[], int dimensione){
-    int i, min=valori[0];
-    for(i=1;i<dimensione;i++)
-        if(valori[i]<min)
-            min=valori[i];
-    return min;
-}
-
-float media(int valori[], int dimensione){
-    int i;
-    float avg=0;
-    for(i=0;i<dimensione;i++)
-        avg+=valori[i];
-    avg/=dimensione;
-    return avg;
 }
 
